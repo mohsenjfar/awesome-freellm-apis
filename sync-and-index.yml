@@ -1,0 +1,54 @@
+name: Daily fork sync + model index rebuild
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # every day at 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync fork with upstream (fast-forward)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Requires this repo to actually be a GitHub *fork* of
+          # open-free-llm-api/awesome-freellm-apis (gh detects upstream
+          # automatically). If it errors with a merge conflict, it means
+          # you edited a file upstream also changed — resolve manually.
+          gh repo sync "$GITHUB_REPOSITORY" --branch main
+
+      - name: Pull the fast-forwarded branch locally
+        run: git pull origin main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Rebuild model index (models.json + .env.example)
+        run: python build_model_index.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- models.json .env.example; then
+            git add models.json .env.example
+            git commit -m "chore: rebuild model index + env template ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No changes to models.json / .env.example — skipping commit."
+          fi
