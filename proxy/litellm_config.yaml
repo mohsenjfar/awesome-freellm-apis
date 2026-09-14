@@ -40,24 +40,25 @@ model_list:
       model: gemini/gemini-3.5-flash
       api_key: os.environ/GOOGLE_API_KEY_3
 
-  # ---- gpt-oss-120b: same model, 2 providers (Groq + Cerebras) ----
-  - model_name: gpt-oss-120b
-    litellm_params:
-      model: groq/openai/gpt-oss-120b
-      api_base: https://api.groq.com/openai/v1
-      api_key: os.environ/GROQ_KEY_1
-  - model_name: gpt-oss-120b
-    litellm_params:
-      model: cerebras/gpt-oss-120b
-      api_base: https://api.cerebras.ai/v1
-      api_key: os.environ/CEREBRAS_KEY_1
+  # ---- gpt-oss-120b: DISABLED Sep 2026 (groq key 401, cerebras 402 no credits)
+  # Re-enable when a funded key exists. Kept as comment for reference.
+  # - model_name: gpt-oss-120b
+  #   litellm_params:
+  #     model: groq/openai/gpt-oss-120b
+  #     api_base: https://api.groq.com/openai/v1
+  #     api_key: os.environ/GROQ_KEY_1
+  # - model_name: gpt-oss-120b
+  #   litellm_params:
+  #     model: cerebras/gpt-oss-120b
+  #     api_base: https://api.cerebras.ai/v1
+  #     api_key: os.environ/CEREBRAS_KEY_1
 
-  # ---- llama-3.3-70b: Groq ----
-  - model_name: llama-3.3-70b
-    litellm_params:
-      model: groq/llama-3.3-70b-versatile
-      api_base: https://api.groq.com/openai/v1
-      api_key: os.environ/GROQ_KEY_1
+  # ---- llama-3.3-70b: DISABLED Sep 2026 (groq key 401)
+  # - model_name: llama-3.3-70b
+  #   litellm_params:
+  #     model: groq/llama-3.3-70b-versatile
+  #     api_base: https://api.groq.com/openai/v1
+  #     api_key: os.environ/GROQ_KEY_1
 
 router_settings:
   routing_strategy: usage-based-routing
