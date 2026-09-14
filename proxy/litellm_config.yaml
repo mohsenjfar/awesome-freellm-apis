@@ -1,56 +1,63 @@
 model_list:
-  # ---- agent-coding: OpenRouter free models, one deployment per key ----
-  - model_name: agent-coding
+  # ---- laguna-s-2.1: same model, 5 OpenRouter accounts ----
+  - model_name: laguna-s-2.1
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_1
-  - model_name: agent-coding
+  - model_name: laguna-s-2.1
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_2
-  - model_name: agent-coding
+  - model_name: laguna-s-2.1
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_3
-  - model_name: agent-coding
+  - model_name: laguna-s-2.1
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_4
-  - model_name: agent-coding
+  - model_name: laguna-s-2.1
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_5
 
-  # ---- agent-fast: Groq + Cerebras ----
-  - model_name: agent-fast
+  # ---- gemini-3.5-flash: same model, 3 Google keys ----
+  - model_name: gemini-3.5-flash
     litellm_params:
-      model: groq/llama-3.3-70b-versatile
+      model: gemini/gemini-3.5-flash
+      api_key: os.environ/GOOGLE_API_KEY_1
+  - model_name: gemini-3.5-flash
+    litellm_params:
+      model: gemini/gemini-3.5-flash
+      api_key: os.environ/GOOGLE_API_KEY_2
+  - model_name: gemini-3.5-flash
+    litellm_params:
+      model: gemini/gemini-3.5-flash
+      api_key: os.environ/GOOGLE_API_KEY_3
+
+  # ---- gpt-oss-120b: same model, 2 providers (Groq + Cerebras) ----
+  - model_name: gpt-oss-120b
+    litellm_params:
+      model: groq/openai/gpt-oss-120b
       api_base: https://api.groq.com/openai/v1
       api_key: os.environ/GROQ_KEY_1
-  - model_name: agent-fast
+  - model_name: gpt-oss-120b
     litellm_params:
       model: cerebras/gpt-oss-120b
       api_base: https://api.cerebras.ai/v1
       api_key: os.environ/CEREBRAS_KEY_1
 
-  # ---- agent-reader: 3 Google keys rotating ----
-  - model_name: agent-reader
+  # ---- llama-3.3-70b: Groq ----
+  - model_name: llama-3.3-70b
     litellm_params:
-      model: gemini/gemini-3.5-flash
-      api_key: os.environ/GOOGLE_API_KEY_1
-  - model_name: agent-reader
-    litellm_params:
-      model: gemini/gemini-3.5-flash
-      api_key: os.environ/GOOGLE_API_KEY_2
-  - model_name: agent-reader
-    litellm_params:
-      model: gemini/gemini-3.5-flash
-      api_key: os.environ/GOOGLE_API_KEY_3
+      model: groq/llama-3.3-70b-versatile
+      api_base: https://api.groq.com/openai/v1
+      api_key: os.environ/GROQ_KEY_1
 
 router_settings:
   routing_strategy: usage-based-routing
