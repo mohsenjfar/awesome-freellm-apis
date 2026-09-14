@@ -2,8 +2,9 @@
 # Generic: no personal names, no API keys (keys live in each agent's own .env).
 # Upstream files (README.*, build_model_index.py) are auto-synced — do not edit;
 # everything local lives under shared/.
+# Health of every entry: shared/model-health.md (update it when a model dies).
 
-version: 1
+version: 2
 updated: 2026-09-14
 
 providers:
@@ -14,13 +15,11 @@ providers:
     key_url: https://build.nvidia.com/settings/api-keys
     key_env: NVIDIA_API_KEY
     no_credit_card: true # phone verification
-    strength: coding + general, 40 RPM, no daily token cap
+    strength: coding + general, 40 RPM when healthy
+    health_note: see shared/model-health.md — several models EOL/unresponsive Sep 2026
     models:
-      - nvidia/nemotron-3-ultra-550b-a55b
       - nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
-      - nvidia/llama-3.1-nemotron-ultra-253b-v1
       - moonshotai/kimi-k3
-      - deepseek-ai/deepseek-v4-pro-0813
 
   - slug: google-ai-studio
     name: Google AI Studio
@@ -30,6 +29,7 @@ providers:
     key_env: GOOGLE_API_KEY
     no_credit_card: true
     strength: long-context reader/summarizer (1M ctx), multimodal
+    health_note: free tier too small for agentic sessions (429); 3 keys available for rotation
     models:
       - gemini-3.7-flash
       - gemini-3.6-flash
@@ -43,6 +43,7 @@ providers:
     key_env: OPENCODE_API_KEY
     no_credit_card: true
     strength: general fallback pool
+    health_note: WORKS but quota-protected — avoid unless user allows
     models:
       - muse-spark-1.3-contributor-free
       - deepseek-v4-flash-free
@@ -53,9 +54,10 @@ providers:
     base_url: https://api.groq.com/openai/v1
     api_mode: chat_completions
     key_url: https://console.groq.com/keys
-    key_env: GROQ_API_KEY
+    key_env: GROQ_KEY_1
     no_credit_card: true
     strength: fastest inference, Llama/Qwen/DeepSeek-R1
+    health_note: repo key 401s (Sep 2026); needs a fresh user-created key
     models:
       - llama-3.3-70b-versatile
       - qwen/qwen3-32b
@@ -68,6 +70,8 @@ providers:
     key_url: https://openrouter.ai/workspaces/default/keys
     key_env: OPENROUTER_API_KEY
     no_credit_card: true
-    strength: one key, many free models (single endpoint)
+    strength: one key, many free models; 6 keys in pool rotating (Sep 2026)
+    health_note: current workhorse for agents; :free models can 429 at model level
     models:
+      - poolside/laguna-s-2.1:free
       - nvidia/nemotron-3-ultra-550b-a55b:free
