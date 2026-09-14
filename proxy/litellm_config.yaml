@@ -1,32 +1,479 @@
 model_list:
-  # ---- laguna-s-2.1: same model, 5 OpenRouter accounts (LIVE Sep 2026) ----
-  - model_name: laguna-s-2.1
+  - model_name: cohere/north-mini-code:free
+    litellm_params:
+      model: openrouter/cohere/north-mini-code:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: cohere/north-mini-code:free
+    litellm_params:
+      model: openrouter/cohere/north-mini-code:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: cohere/north-mini-code:free
+    litellm_params:
+      model: openrouter/cohere/north-mini-code:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: cohere/north-mini-code:free
+    litellm_params:
+      model: openrouter/cohere/north-mini-code:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: cohere/north-mini-code:free
+    litellm_params:
+      model: openrouter/cohere/north-mini-code:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: dots-studio/dots-3-note-preview:free
+    litellm_params:
+      model: openrouter/dots-studio/dots-3-note-preview:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: dots-studio/dots-3-note-preview:free
+    litellm_params:
+      model: openrouter/dots-studio/dots-3-note-preview:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: dots-studio/dots-3-note-preview:free
+    litellm_params:
+      model: openrouter/dots-studio/dots-3-note-preview:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: dots-studio/dots-3-note-preview:free
+    litellm_params:
+      model: openrouter/dots-studio/dots-3-note-preview:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: dots-studio/dots-3-note-preview:free
+    litellm_params:
+      model: openrouter/dots-studio/dots-3-note-preview:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: google/gemma-4-26b-a4b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-26b-a4b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: google/gemma-4-26b-a4b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-26b-a4b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: google/gemma-4-26b-a4b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-26b-a4b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: google/gemma-4-26b-a4b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-26b-a4b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: google/gemma-4-26b-a4b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-26b-a4b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: google/gemma-4-31b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-31b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: google/gemma-4-31b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-31b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: google/gemma-4-31b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-31b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: google/gemma-4-31b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-31b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: google/gemma-4-31b-it:free
+    litellm_params:
+      model: openrouter/google/gemma-4-31b-it:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: inclusionai/ling-3.0-flash-fin:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-fin:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: inclusionai/ling-3.0-flash-fin:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-fin:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: inclusionai/ling-3.0-flash-fin:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-fin:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: inclusionai/ling-3.0-flash-fin:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-fin:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: inclusionai/ling-3.0-flash-fin:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-fin:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: inclusionai/ling-3.0-flash-sante:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-sante:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: inclusionai/ling-3.0-flash-sante:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-sante:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: inclusionai/ling-3.0-flash-sante:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-sante:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: inclusionai/ling-3.0-flash-sante:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-sante:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: inclusionai/ling-3.0-flash-sante:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-sante:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: inclusionai/ling-3.0-flash-vl:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-vl:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: inclusionai/ling-3.0-flash-vl:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-vl:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: inclusionai/ling-3.0-flash-vl:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-vl:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: inclusionai/ling-3.0-flash-vl:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-vl:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: inclusionai/ling-3.0-flash-vl:free
+    litellm_params:
+      model: openrouter/inclusionai/ling-3.0-flash-vl:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: liquid/lfm-2.5-2.6b:free
+    litellm_params:
+      model: openrouter/liquid/lfm-2.5-2.6b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: liquid/lfm-2.5-2.6b:free
+    litellm_params:
+      model: openrouter/liquid/lfm-2.5-2.6b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: liquid/lfm-2.5-2.6b:free
+    litellm_params:
+      model: openrouter/liquid/lfm-2.5-2.6b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: liquid/lfm-2.5-2.6b:free
+    litellm_params:
+      model: openrouter/liquid/lfm-2.5-2.6b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: liquid/lfm-2.5-2.6b:free
+    litellm_params:
+      model: openrouter/liquid/lfm-2.5-2.6b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nex-agi/nex-n2.5-mini:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-mini:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nex-agi/nex-n2.5-mini:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-mini:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nex-agi/nex-n2.5-mini:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-mini:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nex-agi/nex-n2.5-mini:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-mini:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nex-agi/nex-n2.5-mini:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-mini:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nex-agi/nex-n2.5-pro:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-pro:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nex-agi/nex-n2.5-pro:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-pro:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nex-agi/nex-n2.5-pro:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-pro:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nex-agi/nex-n2.5-pro:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-pro:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nex-agi/nex-n2.5-pro:free
+    litellm_params:
+      model: openrouter/nex-agi/nex-n2.5-pro:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nvidia/nemotron-3-super-120b-a12b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-super-120b-a12b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nvidia/nemotron-3-super-120b-a12b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-super-120b-a12b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nvidia/nemotron-3-super-120b-a12b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-super-120b-a12b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nvidia/nemotron-3-super-120b-a12b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-super-120b-a12b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nvidia/nemotron-3-super-120b-a12b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-super-120b-a12b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nvidia/nemotron-3-ultra-550b-a55b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nvidia/nemotron-3-ultra-550b-a55b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nvidia/nemotron-3-ultra-550b-a55b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nvidia/nemotron-3-ultra-550b-a55b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nvidia/nemotron-3-ultra-550b-a55b:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3-ultra-550b-a55b:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nvidia/nemotron-3.5-content-safety:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-content-safety:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nvidia/nemotron-3.5-content-safety:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-content-safety:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nvidia/nemotron-3.5-content-safety:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-content-safety:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nvidia/nemotron-3.5-content-safety:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-content-safety:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nvidia/nemotron-3.5-content-safety:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-content-safety:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: nvidia/nemotron-3.5-lightning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-lightning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: nvidia/nemotron-3.5-lightning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-lightning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: nvidia/nemotron-3.5-lightning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-lightning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: nvidia/nemotron-3.5-lightning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-lightning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: nvidia/nemotron-3.5-lightning:free
+    litellm_params:
+      model: openrouter/nvidia/nemotron-3.5-lightning:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: poolside/laguna-s-2.1:free
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_1
-  - model_name: laguna-s-2.1
+  - model_name: poolside/laguna-s-2.1:free
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_2
-  - model_name: laguna-s-2.1
+  - model_name: poolside/laguna-s-2.1:free
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_3
-  - model_name: laguna-s-2.1
+  - model_name: poolside/laguna-s-2.1:free
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_4
-  - model_name: laguna-s-2.1
+  - model_name: poolside/laguna-s-2.1:free
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_5
-
-  # ---- gemini flash family: same model, 3 Google keys each ----
+  - model_name: poolside/laguna-xs-2.1:free
+    litellm_params:
+      model: openrouter/poolside/laguna-xs-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: poolside/laguna-xs-2.1:free
+    litellm_params:
+      model: openrouter/poolside/laguna-xs-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: poolside/laguna-xs-2.1:free
+    litellm_params:
+      model: openrouter/poolside/laguna-xs-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: poolside/laguna-xs-2.1:free
+    litellm_params:
+      model: openrouter/poolside/laguna-xs-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: poolside/laguna-xs-2.1:free
+    litellm_params:
+      model: openrouter/poolside/laguna-xs-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: thinkingmachines/inkling-small:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling-small:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: thinkingmachines/inkling-small:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling-small:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: thinkingmachines/inkling-small:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling-small:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: thinkingmachines/inkling-small:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling-small:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: thinkingmachines/inkling-small:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling-small:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+  - model_name: thinkingmachines/inkling:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: thinkingmachines/inkling:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: thinkingmachines/inkling:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: thinkingmachines/inkling:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: thinkingmachines/inkling:free
+    litellm_params:
+      model: openrouter/thinkingmachines/inkling:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
   - model_name: gemini-3.5-flash
     litellm_params:
       model: gemini/gemini-3.5-flash
@@ -63,38 +510,641 @@ model_list:
     litellm_params:
       model: gemini/gemini-3.7-flash
       api_key: os.environ/GOOGLE_API_KEY_3
-
-  # ---- mistral family: 1 key, pool across models (LIVE Sep 2026) ----
-  - model_name: ministral-8b
+  - model_name: codestral-2508
     litellm_params:
-      model: mistral/ministral-8b-latest
+      model: mistral/codestral-2508
       api_base: https://api.mistral.ai/v1
       api_key: os.environ/MISTRAL_API_KEY
-  - model_name: mistral-small
+  - model_name: codestral-embed
     litellm_params:
-      model: mistral/mistral-small-latest
+      model: mistral/codestral-embed
       api_base: https://api.mistral.ai/v1
       api_key: os.environ/MISTRAL_API_KEY
-  - model_name: codestral
+  - model_name: codestral-embed-2505
+    litellm_params:
+      model: mistral/codestral-embed-2505
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: codestral-latest
     litellm_params:
       model: mistral/codestral-latest
       api_base: https://api.mistral.ai/v1
       api_key: os.environ/MISTRAL_API_KEY
-
-  # ---- nvidia nemotron (LIVE Sep 2026) ----
-  - model_name: nemotron-3-nano
+  - model_name: labs-leanstral-1-5
+    litellm_params:
+      model: mistral/labs-leanstral-1-5
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: labs-leanstral-1-5-1
+    litellm_params:
+      model: mistral/labs-leanstral-1-5-1
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: magistral-medium-latest
+    litellm_params:
+      model: mistral/magistral-medium-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: magistral-small-latest
+    litellm_params:
+      model: mistral/magistral-small-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: ministral-14b-2512
+    litellm_params:
+      model: mistral/ministral-14b-2512
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: ministral-14b-latest
+    litellm_params:
+      model: mistral/ministral-14b-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: ministral-3b-2512
+    litellm_params:
+      model: mistral/ministral-3b-2512
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: ministral-3b-latest
+    litellm_params:
+      model: mistral/ministral-3b-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: ministral-8b-2512
+    litellm_params:
+      model: mistral/ministral-8b-2512
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: ministral-8b-latest
+    litellm_params:
+      model: mistral/ministral-8b-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-code-fim-latest
+    litellm_params:
+      model: mistral/mistral-code-fim-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-code-latest
+    litellm_params:
+      model: mistral/mistral-code-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-embed
+    litellm_params:
+      model: mistral/mistral-embed
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-embed-2312
+    litellm_params:
+      model: mistral/mistral-embed-2312
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-medium
+    litellm_params:
+      model: mistral/mistral-medium
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-medium-2604
+    litellm_params:
+      model: mistral/mistral-medium-2604
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-medium-3
+    litellm_params:
+      model: mistral/mistral-medium-3
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-medium-3-5
+    litellm_params:
+      model: mistral/mistral-medium-3-5
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-medium-3.5
+    litellm_params:
+      model: mistral/mistral-medium-3.5
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-medium-latest
+    litellm_params:
+      model: mistral/mistral-medium-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-moderation-2603
+    litellm_params:
+      model: mistral/mistral-moderation-2603
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-2512
+    litellm_params:
+      model: mistral/mistral-ocr-2512
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-3
+    litellm_params:
+      model: mistral/mistral-ocr-3
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-3-0
+    litellm_params:
+      model: mistral/mistral-ocr-3-0
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-4
+    litellm_params:
+      model: mistral/mistral-ocr-4
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-4-0
+    litellm_params:
+      model: mistral/mistral-ocr-4-0
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-4-1
+    litellm_params:
+      model: mistral/mistral-ocr-4-1
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-ocr-latest
+    litellm_params:
+      model: mistral/mistral-ocr-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-small-2603
+    litellm_params:
+      model: mistral/mistral-small-2603
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-small-latest
+    litellm_params:
+      model: mistral/mistral-small-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-vibe-cli-fast
+    litellm_params:
+      model: mistral/mistral-vibe-cli-fast
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-vibe-cli-latest
+    litellm_params:
+      model: mistral/mistral-vibe-cli-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-vibe-cli-with-tools
+    litellm_params:
+      model: mistral/mistral-vibe-cli-with-tools
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-2602
+    litellm_params:
+      model: mistral/voxtral-mini-2602
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-latest
+    litellm_params:
+      model: mistral/voxtral-mini-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-realtime-2602
+    litellm_params:
+      model: mistral/voxtral-mini-realtime-2602
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-realtime-latest
+    litellm_params:
+      model: mistral/voxtral-mini-realtime-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-transcribe-realtime-2602
+    litellm_params:
+      model: mistral/voxtral-mini-transcribe-realtime-2602
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-tts-2603
+    litellm_params:
+      model: mistral/voxtral-mini-tts-2603
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-mini-tts-latest
+    litellm_params:
+      model: mistral/voxtral-mini-tts-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-small-2507
+    litellm_params:
+      model: mistral/voxtral-small-2507
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: voxtral-small-latest
+    litellm_params:
+      model: mistral/voxtral-small-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: 01-ai/yi-large
+    litellm_params:
+      model: nvidia_nim/01-ai/yi-large
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: adept/fuyu-8b
+    litellm_params:
+      model: nvidia_nim/adept/fuyu-8b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: ai21labs/jamba-1.5-large-instruct
+    litellm_params:
+      model: nvidia_nim/ai21labs/jamba-1.5-large-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: aisingapore/sea-lion-7b-instruct
+    litellm_params:
+      model: nvidia_nim/aisingapore/sea-lion-7b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: bigcode/starcoder2-15b
+    litellm_params:
+      model: nvidia_nim/bigcode/starcoder2-15b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: databricks/dbrx-instruct
+    litellm_params:
+      model: nvidia_nim/databricks/dbrx-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: deepseek-ai/deepseek-coder-6.7b-instruct
+    litellm_params:
+      model: nvidia_nim/deepseek-ai/deepseek-coder-6.7b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: deepseek-ai/deepseek-v4-flash-0731
+    litellm_params:
+      model: nvidia_nim/deepseek-ai/deepseek-v4-flash-0731
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/codegemma-1.1-7b
+    litellm_params:
+      model: nvidia_nim/google/codegemma-1.1-7b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/codegemma-7b
+    litellm_params:
+      model: nvidia_nim/google/codegemma-7b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/deplot
+    litellm_params:
+      model: nvidia_nim/google/deplot
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/diffusiongemma-26b-a4b-it
+    litellm_params:
+      model: nvidia_nim/google/diffusiongemma-26b-a4b-it
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/gemma-2b
+    litellm_params:
+      model: nvidia_nim/google/gemma-2b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/gemma-3-12b-it
+    litellm_params:
+      model: nvidia_nim/google/gemma-3-12b-it
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/gemma-3-4b-it
+    litellm_params:
+      model: nvidia_nim/google/gemma-3-4b-it
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/gemma-4-31b-it
+    litellm_params:
+      model: nvidia_nim/google/gemma-4-31b-it
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: google/recurrentgemma-2b
+    litellm_params:
+      model: nvidia_nim/google/recurrentgemma-2b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: ibm/granite-3.0-3b-a800m-instruct
+    litellm_params:
+      model: nvidia_nim/ibm/granite-3.0-3b-a800m-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: ibm/granite-3.0-8b-instruct
+    litellm_params:
+      model: nvidia_nim/ibm/granite-3.0-8b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: ibm/granite-34b-code-instruct
+    litellm_params:
+      model: nvidia_nim/ibm/granite-34b-code-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: ibm/granite-8b-code-instruct
+    litellm_params:
+      model: nvidia_nim/ibm/granite-8b-code-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: meta/codellama-70b
+    litellm_params:
+      model: nvidia_nim/meta/codellama-70b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: meta/llama-3.2-11b-vision-instruct
+    litellm_params:
+      model: nvidia_nim/meta/llama-3.2-11b-vision-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: meta/llama-3.2-90b-vision-instruct
+    litellm_params:
+      model: nvidia_nim/meta/llama-3.2-90b-vision-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: meta/llama-guard-4-12b
+    litellm_params:
+      model: nvidia_nim/meta/llama-guard-4-12b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: meta/llama2-70b
+    litellm_params:
+      model: nvidia_nim/meta/llama2-70b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: meta/muse-glimmer-30b
+    litellm_params:
+      model: nvidia_nim/meta/muse-glimmer-30b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: microsoft/kosmos-2
+    litellm_params:
+      model: nvidia_nim/microsoft/kosmos-2
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: microsoft/phi-3-vision-128k-instruct
+    litellm_params:
+      model: nvidia_nim/microsoft/phi-3-vision-128k-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: microsoft/phi-3.5-moe-instruct
+    litellm_params:
+      model: nvidia_nim/microsoft/phi-3.5-moe-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: mistralai/codestral-22b-instruct-v0.1
+    litellm_params:
+      model: nvidia_nim/mistralai/codestral-22b-instruct-v0.1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: mistralai/mistral-7b-instruct-v0.3
+    litellm_params:
+      model: nvidia_nim/mistralai/mistral-7b-instruct-v0.3
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: mistralai/mistral-large
+    litellm_params:
+      model: nvidia_nim/mistralai/mistral-large
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: mistralai/mistral-large-2-instruct
+    litellm_params:
+      model: nvidia_nim/mistralai/mistral-large-2-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: mistralai/mistral-nemotron
+    litellm_params:
+      model: nvidia_nim/mistralai/mistral-nemotron
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: mistralai/mixtral-8x22b-v0.1
+    litellm_params:
+      model: nvidia_nim/mistralai/mixtral-8x22b-v0.1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: moonshotai/kimi-k2.6
+    litellm_params:
+      model: nvidia_nim/moonshotai/kimi-k2.6
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: moonshotai/kimi-k3
+    litellm_params:
+      model: nvidia_nim/moonshotai/kimi-k3
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nv-mistralai/mistral-nemo-12b-instruct
+    litellm_params:
+      model: nvidia_nim/nv-mistralai/mistral-nemo-12b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/ai-synthetic-video-detector
+    litellm_params:
+      model: nvidia_nim/nvidia/ai-synthetic-video-detector
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/cosmos-reason2-8b
+    litellm_params:
+      model: nvidia_nim/nvidia/cosmos-reason2-8b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/embed-qa-4
+    litellm_params:
+      model: nvidia_nim/nvidia/embed-qa-4
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/ising-calibration-1.5-31b
+    litellm_params:
+      model: nvidia_nim/nvidia/ising-calibration-1.5-31b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.1-nemoguard-8b-content-safety
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.1-nemoguard-8b-content-safety
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.1-nemoguard-8b-topic-control
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.1-nemoguard-8b-topic-control
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.1-nemotron-51b-instruct
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.1-nemotron-51b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.1-nemotron-70b-instruct
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.1-nemotron-70b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.1-nemotron-safety-guard-8b-v3
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.1-nemotron-safety-guard-8b-v3
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.1-nemotron-ultra-253b-v1
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.1-nemotron-ultra-253b-v1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-3.2-nv-embedqa-1b-v1
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-3.2-nv-embedqa-1b-v1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama-nemotron-embed-vl-1b-v2
+    litellm_params:
+      model: nvidia_nim/nvidia/llama-nemotron-embed-vl-1b-v2
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/llama3-chatqa-1.5-70b
+    litellm_params:
+      model: nvidia_nim/nvidia/llama3-chatqa-1.5-70b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/mistral-nemo-minitron-8b-8k-instruct
+    litellm_params:
+      model: nvidia_nim/nvidia/mistral-nemo-minitron-8b-8k-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-3-embed-1b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-embed-1b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
     litellm_params:
       model: nvidia_nim/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
       api_base: https://integrate.api.nvidia.com/v1
       api_key: os.environ/NVIDIA_API_KEY
-
-  # ---- DISABLED Sep 2026 (kept for re-enable with a healthy key) ----
-  # gpt-oss-120b: groq key 401/403, cerebras 402 no credits
-  # llama-3.3-70b: groq key dead
-  # llm7/*: 402 payment required
-  # agentrouter: key rejected (unauthorized client)
-  # github-models: endpoint 410 Gone
-  # bai: base URL unknown — needs owner input
+  - model_name: nvidia/nemotron-3-super-120b-a12b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-super-120b-a12b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-3-ultra-550b-a55b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-3.5-content-safety
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3.5-content-safety
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-3.5-lightning-30b-a3b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3.5-lightning-30b-a3b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-4-340b-instruct
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-4-340b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-4-340b-reward
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-4-340b-reward
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-nano-3-30b-a3b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-nano-3-30b-a3b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-parse
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-parse
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nemotron-parse-2.0
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-parse-2.0
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/neva-22b
+    litellm_params:
+      model: nvidia_nim/nvidia/neva-22b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nv-embedqa-mistral-7b-v2
+    litellm_params:
+      model: nvidia_nim/nvidia/nv-embedqa-mistral-7b-v2
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/nvclip
+    litellm_params:
+      model: nvidia_nim/nvidia/nvclip
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/riva-translate-4b-instruct
+    litellm_params:
+      model: nvidia_nim/nvidia/riva-translate-4b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/riva-translate-4b-instruct-v1.1
+    litellm_params:
+      model: nvidia_nim/nvidia/riva-translate-4b-instruct-v1.1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/riva-translate-4b-instruct-v2
+    litellm_params:
+      model: nvidia_nim/nvidia/riva-translate-4b-instruct-v2
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: nvidia/vila
+    litellm_params:
+      model: nvidia_nim/nvidia/vila
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: openai/gpt-oss-20b
+    litellm_params:
+      model: nvidia_nim/openai/gpt-oss-20b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: poolside/laguna-xs-2.1
+    litellm_params:
+      model: nvidia_nim/poolside/laguna-xs-2.1
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: snowflake/arctic-embed-l
+    litellm_params:
+      model: nvidia_nim/snowflake/arctic-embed-l
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: writer/palmyra-creative-122b
+    litellm_params:
+      model: nvidia_nim/writer/palmyra-creative-122b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: writer/palmyra-fin-70b-32k
+    litellm_params:
+      model: nvidia_nim/writer/palmyra-fin-70b-32k
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: writer/palmyra-med-70b
+    litellm_params:
+      model: nvidia_nim/writer/palmyra-med-70b
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: writer/palmyra-med-70b-32k
+    litellm_params:
+      model: nvidia_nim/writer/palmyra-med-70b-32k
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: z-ai/glm-5.3-flash
+    litellm_params:
+      model: nvidia_nim/z-ai/glm-5.3-flash
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+  - model_name: zyphra/zamba2-7b-instruct
+    litellm_params:
+      model: nvidia_nim/zyphra/zamba2-7b-instruct
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
 
 router_settings:
   routing_strategy: usage-based-routing
