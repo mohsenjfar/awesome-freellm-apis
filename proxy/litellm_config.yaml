@@ -1,0 +1,61 @@
+model_list:
+  # ---- agent-coding: OpenRouter free models, one deployment per key ----
+  - model_name: agent-coding
+    litellm_params:
+      model: openrouter/poolside/laguna-s-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_1
+  - model_name: agent-coding
+    litellm_params:
+      model: openrouter/poolside/laguna-s-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_2
+  - model_name: agent-coding
+    litellm_params:
+      model: openrouter/poolside/laguna-s-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_3
+  - model_name: agent-coding
+    litellm_params:
+      model: openrouter/poolside/laguna-s-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_4
+  - model_name: agent-coding
+    litellm_params:
+      model: openrouter/poolside/laguna-s-2.1:free
+      api_base: https://openrouter.ai/api/v1
+      api_key: os.environ/OPENROUTER_API_KEY_5
+
+  # ---- agent-fast: Groq + Cerebras ----
+  - model_name: agent-fast
+    litellm_params:
+      model: groq/llama-3.3-70b-versatile
+      api_base: https://api.groq.com/openai/v1
+      api_key: os.environ/GROQ_KEY_1
+  - model_name: agent-fast
+    litellm_params:
+      model: cerebras/gpt-oss-120b
+      api_base: https://api.cerebras.ai/v1
+      api_key: os.environ/CEREBRAS_KEY_1
+
+  # ---- agent-reader: 3 Google keys rotating ----
+  - model_name: agent-reader
+    litellm_params:
+      model: gemini/gemini-3.5-flash
+      api_key: os.environ/GOOGLE_API_KEY_1
+  - model_name: agent-reader
+    litellm_params:
+      model: gemini/gemini-3.5-flash
+      api_key: os.environ/GOOGLE_API_KEY_2
+  - model_name: agent-reader
+    litellm_params:
+      model: gemini/gemini-3.5-flash
+      api_key: os.environ/GOOGLE_API_KEY_3
+
+router_settings:
+  routing_strategy: usage-based-routing
+  allowed_fails: 1
+  cooldown_time: 60
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
