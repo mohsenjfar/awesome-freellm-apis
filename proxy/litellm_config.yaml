@@ -1,5 +1,5 @@
 model_list:
-  # ---- laguna-s-2.1: same model, 5 OpenRouter accounts ----
+  # ---- laguna-s-2.1: same model, 5 OpenRouter accounts (LIVE Sep 2026) ----
   - model_name: laguna-s-2.1
     litellm_params:
       model: openrouter/poolside/laguna-s-2.1:free
@@ -26,7 +26,7 @@ model_list:
       api_base: https://openrouter.ai/api/v1
       api_key: os.environ/OPENROUTER_API_KEY_5
 
-  # ---- gemini-3.5-flash: same model, 3 Google keys ----
+  # ---- gemini flash family: same model, 3 Google keys each ----
   - model_name: gemini-3.5-flash
     litellm_params:
       model: gemini/gemini-3.5-flash
@@ -39,26 +39,62 @@ model_list:
     litellm_params:
       model: gemini/gemini-3.5-flash
       api_key: os.environ/GOOGLE_API_KEY_3
+  - model_name: gemini-3.6-flash
+    litellm_params:
+      model: gemini/gemini-3.6-flash
+      api_key: os.environ/GOOGLE_API_KEY_1
+  - model_name: gemini-3.6-flash
+    litellm_params:
+      model: gemini/gemini-3.6-flash
+      api_key: os.environ/GOOGLE_API_KEY_2
+  - model_name: gemini-3.6-flash
+    litellm_params:
+      model: gemini/gemini-3.6-flash
+      api_key: os.environ/GOOGLE_API_KEY_3
+  - model_name: gemini-3.7-flash
+    litellm_params:
+      model: gemini/gemini-3.7-flash
+      api_key: os.environ/GOOGLE_API_KEY_1
+  - model_name: gemini-3.7-flash
+    litellm_params:
+      model: gemini/gemini-3.7-flash
+      api_key: os.environ/GOOGLE_API_KEY_2
+  - model_name: gemini-3.7-flash
+    litellm_params:
+      model: gemini/gemini-3.7-flash
+      api_key: os.environ/GOOGLE_API_KEY_3
 
-  # ---- gpt-oss-120b: DISABLED Sep 2026 (groq key 401, cerebras 402 no credits)
-  # Re-enable when a funded key exists. Kept as comment for reference.
-  # - model_name: gpt-oss-120b
-  #   litellm_params:
-  #     model: groq/openai/gpt-oss-120b
-  #     api_base: https://api.groq.com/openai/v1
-  #     api_key: os.environ/GROQ_KEY_1
-  # - model_name: gpt-oss-120b
-  #   litellm_params:
-  #     model: cerebras/gpt-oss-120b
-  #     api_base: https://api.cerebras.ai/v1
-  #     api_key: os.environ/CEREBRAS_KEY_1
+  # ---- mistral family: 1 key, pool across models (LIVE Sep 2026) ----
+  - model_name: ministral-8b
+    litellm_params:
+      model: mistral/ministral-8b-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: mistral-small
+    litellm_params:
+      model: mistral/mistral-small-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
+  - model_name: codestral
+    litellm_params:
+      model: mistral/codestral-latest
+      api_base: https://api.mistral.ai/v1
+      api_key: os.environ/MISTRAL_API_KEY
 
-  # ---- llama-3.3-70b: DISABLED Sep 2026 (groq key 401)
-  # - model_name: llama-3.3-70b
-  #   litellm_params:
-  #     model: groq/llama-3.3-70b-versatile
-  #     api_base: https://api.groq.com/openai/v1
-  #     api_key: os.environ/GROQ_KEY_1
+  # ---- nvidia nemotron (LIVE Sep 2026) ----
+  - model_name: nemotron-3-nano
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+      api_base: https://integrate.api.nvidia.com/v1
+      api_key: os.environ/NVIDIA_API_KEY
+
+  # ---- DISABLED Sep 2026 (kept for re-enable with a healthy key) ----
+  # gpt-oss-120b: groq key 401/403, cerebras 402 no credits
+  # llama-3.3-70b: groq key dead
+  # llm7/*: 402 payment required
+  # agentrouter: key rejected (unauthorized client)
+  # github-models: endpoint 410 Gone
+  # bai: base URL unknown — needs owner input
 
 router_settings:
   routing_strategy: usage-based-routing
